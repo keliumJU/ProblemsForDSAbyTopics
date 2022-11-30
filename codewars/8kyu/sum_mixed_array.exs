@@ -14,3 +14,6 @@ end
 IO.puts SumMix.sumMin([1,2,3])
 IO.puts SumMix.sumMin(["1",2,"3"])
 IO.puts SumMix.sumMin(["1","2","3"])
+
+#Change of approach
+#list of comprehensions: https://www.mitchellhanberg.com/the-comprehensive-guide-to-elixirs-for-comprehension/
