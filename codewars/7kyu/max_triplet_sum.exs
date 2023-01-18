@@ -1,3 +1,4 @@
+#url: https://www.codewars.com/kata/5aa1bcda373c2eb596000112/train/elixir
 defmodule Kata do
   def max_tri_sum(nums) do
     nums |>
