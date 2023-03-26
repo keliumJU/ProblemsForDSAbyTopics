@@ -96,4 +96,10 @@ fn main() {
 
     println!("The value of the element at index {index} is: {element}")
 
+    another_function()
+
+}
+
+fn another_function() {
+    print!("Another function.");
 }
