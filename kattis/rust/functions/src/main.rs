@@ -20,6 +20,9 @@ fn main() {
      let q = plus_one(5);
      println!("The value of x is: {q}");
 
+     //Comments
+     //-> This is a comment  :-[]
+
 }
 fn five() -> i32 {
     5 //expresion we want to return
