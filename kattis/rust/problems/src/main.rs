@@ -8,6 +8,9 @@ fn main() {
 
     let nth_fibo = get_nth_fibo(n);
     println!("{nth_fibo}");
+
+    let lyric_song = print_lyrics_cristmas_carol();
+    println!("{lyric_song}");
 }
 
 fn fahrenheit_to_celsius(fahrenheit: i32)-> f32 {
@@ -26,4 +29,19 @@ fn get_nth_fibo(n: i32) -> i32 {
     }
     let ans = n-1;
     v[ans as usize]
+}
+
+fn print_lyrics_cristmas_carol() -> String{
+
+    let days: [&str; 12] = [
+        "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"
+    ];
+    for i in 0..12 {
+        let day = days[i];
+        let head = format!("On the {day} day of Christmas\n").to_string();
+        println!("{head}");
+    }
+    let ans= String::from("Hello, world!");
+
+    return ans;
 }
