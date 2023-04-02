@@ -36,9 +36,13 @@ fn print_lyrics_cristmas_carol() -> String{
     let days: [&str; 12] = [
         "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"
     ];
+    let _numeration: [&str; 10] = [
+        "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"
+    ];
     for i in 0..12 {
         let day = days[i];
         let head = format!("On the {day} day of Christmas\n").to_string();
+        let _head2 = format!("My true love gave to me\n");
         println!("{head}");
     }
     let ans= String::from("Hello, world!");
