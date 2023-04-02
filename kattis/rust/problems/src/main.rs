@@ -39,6 +39,12 @@ fn print_lyrics_cristmas_carol() -> String{
     let _numeration: [&str; 10] = [
         "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"
     ];
+    let verse: [&str; 5] = [
+        "My true love gave to me\n",
+        "Two turtle doves\n",
+        "And a partridge in a pear tree\n",
+        ""
+    ]
     for i in 0..12 {
         let day = days[i];
         let head = format!("On the {day} day of Christmas\n").to_string();
