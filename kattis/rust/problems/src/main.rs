@@ -9,8 +9,7 @@ fn main() {
     let nth_fibo = get_nth_fibo(n);
     println!("{nth_fibo}");
 
-    let lyric_song = print_lyrics_cristmas_carol();
-    println!("{lyric_song}");
+    print_lyrics_cristmas_carol();
 }
 
 fn fahrenheit_to_celsius(fahrenheit: i32)-> f32 {
@@ -31,27 +30,41 @@ fn get_nth_fibo(n: i32) -> i32 {
     v[ans as usize]
 }
 
-fn print_lyrics_cristmas_carol() -> String{
+fn print_lyrics_cristmas_carol(){
 
     let days: [&str; 12] = [
         "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"
     ];
-    let _numeration: [&str; 10] = [
-        "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"
-    ];
-    let verse: [&str; 5] = [
+    let static_head: [&str; 2] = [
         "My true love gave to me\n",
+        "And a partridge in a pear tree\n"
+    ];
+    let verse: [&str; 11] = [
         "Two turtle doves\n",
-        "And a partridge in a pear tree\n",
-        ""
-    ]
+        "Three French hens\n",
+        "Four calling birds\n",
+        "Five golden rings\n",
+        "Six geese-a-laying\n",
+        "Seven swans-a-swimming\n",
+        "Eight maids-a-milking\n",
+        "Nine ladies dancing\n",
+        "Ten lords-a-leaping\n",
+        "Eleven pipers piping\n",
+        "Twelve drummers drumming\n",
+    ];
     for i in 0..12 {
         let day = days[i];
         let head = format!("On the {day} day of Christmas\n").to_string();
-        let _head2 = format!("My true love gave to me\n");
+        let second_head = static_head[0];
         println!("{head}");
+        println!("{second_head}");
+        if i > 0 {
+            for i in i..0 {
+                let body = verse[i];
+                println!("{body}")
+            }
+        }
+        let end_verse_song = static_head[1];
+        println!("{end_verse_song}");
     }
-    let ans= String::from("Hello, world!");
-
-    return ans;
 }
