@@ -36,35 +36,36 @@ fn print_lyrics_cristmas_carol(){
         "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"
     ];
     let static_head: [&str; 2] = [
-        "My true love gave to me\n",
-        "And a partridge in a pear tree\n"
+        "My true love gave to me",
+        "And a partridge in a pear tree"
     ];
     let verse: [&str; 11] = [
-        "Two turtle doves\n",
-        "Three French hens\n",
-        "Four calling birds\n",
-        "Five golden rings\n",
-        "Six geese-a-laying\n",
-        "Seven swans-a-swimming\n",
-        "Eight maids-a-milking\n",
-        "Nine ladies dancing\n",
-        "Ten lords-a-leaping\n",
-        "Eleven pipers piping\n",
-        "Twelve drummers drumming\n",
+        "Two turtle doves",
+        "Three French hens",
+        "Four calling birds",
+        "Five golden rings",
+        "Six geese-a-laying",
+        "Seven swans-a-swimming",
+        "Eight maids-a-milking",
+        "Nine ladies dancing",
+        "Ten lords-a-leaping",
+        "Eleven pipers piping",
+        "Twelve drummers drumming",
     ];
     for i in 0..12 {
         let day = days[i];
-        let head = format!("On the {day} day of Christmas\n").to_string();
+        let head = format!("On the {day} day of Christmas").to_string();
         let second_head = static_head[0];
         println!("{head}");
         println!("{second_head}");
         if i > 0 {
-            for i in i..0 {
-                let body = verse[i];
-                println!("{body}")
+            for j in (0..i).rev().step_by(1) {
+                let body = verse[j];
+                println!("{body}");
             }
         }
         let end_verse_song = static_head[1];
         println!("{end_verse_song}");
+        println!("----------------------------------------------");
     }
 }
