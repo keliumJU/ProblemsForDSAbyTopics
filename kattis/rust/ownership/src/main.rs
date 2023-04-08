@@ -28,4 +28,17 @@ fn main() {
     //eviting the double free bug(memory allocate)
     //so Rust drop the s1 reference, only save s2 reference :) that points the same s1 reference
     //so that would say that s1 was moved into s2
+
+
+    //Variables and Data Interacting with Clone
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
+
+    println!("s1 = {}, s2 = {}", s1, s2);
+
+    //Stack-Only Data: Copy
+    let x = 5;
+    let y = x;
+
+    println!("x = {}, y = {}", x, y);
 }
