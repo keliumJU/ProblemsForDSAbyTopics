@@ -48,7 +48,16 @@ fn main() {
     println!("{}", r3);
 
     //Dangling References
+    let reference_to_nothing = dangle();
 
+    //The rules of references
+    
+
+}
+
+fn dangle() -> String {
+    let s = String::from("hello");
+    s
 }
 
 fn change(some_string: &mut String) {
