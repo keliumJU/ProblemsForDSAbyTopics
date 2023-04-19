@@ -52,7 +52,8 @@ fn main() {
     println!("{}", reference_to_nothing);
 
     //The rules of references
-    
+    // 1. At any given time, you can have either one mutable reference or any nomber of immutable references.
+    // 2. References must always be valid.
 
 }
 
