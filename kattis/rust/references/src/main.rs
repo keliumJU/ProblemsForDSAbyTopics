@@ -49,6 +49,7 @@ fn main() {
 
     //Dangling References
     let reference_to_nothing = dangle();
+    println!("{}", reference_to_nothing);
 
     //The rules of references
     
