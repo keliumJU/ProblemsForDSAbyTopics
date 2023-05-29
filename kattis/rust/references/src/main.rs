@@ -5,14 +5,13 @@ fn main() {
     let len = calculate_length(&s1);
     println!("The length of '{}' is {}.", s1, len);
 
-
     //Mutable references
     let mut s = String::from("hello");
     change(&mut s);
     println!("{}", s);
 
     //Error code
-    /* 
+    /*
     let mut s2 = String::from("hello");
     let r2 = &mut s2;
     let r3 = &mut s2;
@@ -27,11 +26,11 @@ fn main() {
     let mut s2 = String::from("Hello");
     {
         let r1 = &mut s;
-    }// r1 goes out of scope here, so we can make a new references with no problems.
+    } // r1 goes out of scope here, so we can make a new references with no problems.
     let r2 = &mut s;
 
     //note: we cannot have a mutable reference while we have an immutable one to the same value
-    /* 
+    /*
         let r1 = &s1;
         let r2 = &s1;
         let r3 = &mut s2;
@@ -54,7 +53,6 @@ fn main() {
     //The rules of references
     // 1. At any given time, you can have either one mutable reference or any nomber of immutable references.
     // 2. References must always be valid.
-
 }
 
 fn dangle() -> String {
