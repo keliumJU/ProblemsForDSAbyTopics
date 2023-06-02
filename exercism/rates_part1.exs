@@ -14,10 +14,16 @@ defmodule FreelancerRates do
   end
 
   def days_in_budget(budget, hourly_rate, discount) do
-    # Please implement the days_in_budget/3 function
+    total =
+      daily_rate(hourly_rate)
+      |> apply_discount(discount)
+
+    (budget / total)
+      |> Float.floor(1)
   end
 end
 
 IO.inspect(FreelancerRates.daily_rate(60))
 IO.inspect(FreelancerRates.apply_discount(150 ,10))
 IO.inspect(FreelancerRates.monthly_rate(77 ,10.5))
+IO.inspect(FreelancerRates.days_in_budget(20000, 80, 11.0))
