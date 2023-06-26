@@ -1,4 +1,7 @@
 defmodule Form do
+  @type address_map :: %{street: String.t(), postal_code: String.t(), city: String.t()}
+  @type address_tuple :: {street :: String.t(), postal_code :: String.t(), city :: String.t()}
+  @type address :: address_map() | address_tuple()
   @moduledoc """
   A collection of loosely related functions helpful for filling out various forms at the city office.
   """
@@ -44,6 +47,10 @@ defmodule Form do
     end
   end
 
+  @doc """
+  Formats the address as an uppercase multiline string.
+  """
+  @spec format_address(address()) :: String.t()
   def format_address(%{street: street, postal_code: postal_code, city: city}) do
     format_address({street, postal_code, city})
   end
@@ -55,3 +62,5 @@ defmodule Form do
     """
   end
 end
+
+IO.inspect(Form.format_address(%{street: "CL 14", postal_code: "00700", city: "New york"}))
