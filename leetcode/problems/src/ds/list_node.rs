@@ -10,3 +10,14 @@ impl ListNode {
         ListNode { next: None, val }
     }
 }
+
+pub fn array_to_list(arr: &[i32]) -> Option<Box<ListNode>> {
+    let mut head: Option<Box<ListNode>> = None;
+    let mut tail: &mut Option<Box<ListNode>> = &mut head;
+
+    for &val in arr {
+        *tail = Some(Box::new(ListNode { val, next: None }));
+        tail = &mut (*tail).as_mut().unwrap().next;
+    }
+    head
+}
