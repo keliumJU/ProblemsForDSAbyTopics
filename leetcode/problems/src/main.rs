@@ -5,8 +5,5 @@ use crate::ds::list_node::{array_to_list, ListNode};
 use crate::ex::*;
 
 fn main() {
-    println!(
-        "{:?}",
-        ex::_383::can_construct(String::from("aa"), String::from("aab"))
-    );
+    println!("{:?}", ex::_9::is_palindrome(-11));
 }
