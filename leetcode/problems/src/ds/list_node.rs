@@ -29,22 +29,22 @@ pub fn is_empty(list: Option<Box<ListNode>>) -> bool {
     false
 }
 
-pub fn insert_after(
-    mut node: Option<Box<ListNode>>,
-    mut node_before: Option<Box<ListNode>>,
-) -> Option<Box<ListNode>> {
-    if node_before.is_none() {
-        node.as_mut().unwrap().next = None;
-        node_before = node;
-    } else {
-        let tndb = node_before.as_mut().unwrap().next.take();
-        //node.as_mut().unwrap().next = tndb;
-        //node_before.as_mut().unwrap().next = node;
-        node_before.as_mut().unwrap().next = node;
-        node.as_mut().unwrap().next = tndb;
-    }
+// pub fn insert_after(
+//     mut node: Option<Box<ListNode>>,
+//     mut node_before: Option<Box<ListNode>>,
+// ) -> Option<Box<ListNode>> {
+//     if node_before.is_none() {
+//         node.as_mut().unwrap().next = None;
+//         node_before = node;
+//     } else {
+//         let tndb = node_before.as_mut().unwrap().next.take();
+//         //node.as_mut().unwrap().next = tndb;
+//         //node_before.as_mut().unwrap().next = node;
+//         node_before.as_mut().unwrap().next = node;
+//         node.as_mut().unwrap().next = tndb;
+//     }
 
-    node_before
-}
+//     node_before
+// }
 
 // pub fn insert_before() {}
