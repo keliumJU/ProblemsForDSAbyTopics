@@ -74,6 +74,7 @@ public class Solution {
     return ans;
   }
   
+  // Work in progress
   public void Merge(int[] nums1, int m, int[] nums2, int n) {
     List<int> list = new List<int>();
     int p1 = 0;
@@ -99,6 +100,7 @@ public class Solution {
     }
     for(int i = 0; i < (m + n); i++) {
       nums1[i] = list[i];
+
     }
   }
 }

@@ -1,4 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using ArraysLeetcode;
+
+// See https://aka.ms/new-console-template for more information
 ListNode parseArrayToListNode(int [] list, int sz) {
   if (list.Length == 0) {
     return new ListNode();
@@ -34,10 +36,28 @@ string printListNode(ListNode head) {
 //ListNode l2 = parseArrayToListNode([1,1,3,4], 4);
 // Console.WriteLine(printListNode(l1));
 
-int[] nums1 = [];
-int[] nums2 = [1];
+//int[] nums1 = [];
+//int[] nums2 = [1];
 
-Solution sol = new();
-sol.Merge(nums1, 0, nums2, 1);
-Console.WriteLine(string.Join(", ", nums1));
+//Solution sol = new();
+//sol.Merge(nums1, 0, nums2, 1);
+//Console.WriteLine(string.Join(", ", nums1));
+
+
+
+//int[] nums = [1,3,2,1];
+//var problem = new TopicArrays();
+//Console.WriteLine(string.Join(", ", problem.GetConcatenation(nums)));
+
+// var problem = new TopicArrays();
+// int[] nums = [1,1,2,2,2,3];
+// Console.WriteLine(problem.RemoveDuplicates(nums));
+// Console.WriteLine(string.Join(", ", nums));
+
+var problem = new TopicArrays();
+int[] nums = [0,1,2,2,3,0,4,2];
+Console.WriteLine(problem.RemoveElement(nums, 2));
+Console.WriteLine(string.Join(", ", nums));
+
+
 
