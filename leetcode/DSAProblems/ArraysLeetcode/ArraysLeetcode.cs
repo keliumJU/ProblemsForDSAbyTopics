@@ -124,4 +124,45 @@ public class TopicArrays
             return l;
         }
     }
+
+    // 66. Plus One
+    public int[] PlusOne(int[] digits)
+    {
+        int size = digits.Length;
+        int lastDigit = digits[size - 1];
+
+        if (size == 1)
+        {
+            if (digits[0] + 1 == 10)
+            {
+                return [1, 0];
+            }
+            else
+            {
+                return [digits[0] + 1];
+            }
+        }
+
+        // get the index where the secuence ending
+        int i = size - 1;
+        while (i >= 0 && digits[i] == 9)
+        {
+            digits[i] = 0;
+            i--;
+        }
+
+        // continue in a new loop adding the rest of the secuence not really because
+        // we add updating the digits array so only we need to update the next value
+        // if enters in the while loop
+        if (i < 0 && lastDigit == 9)
+        {
+            int[] total = new int[size + 1];
+            Array.Copy(digits, 0, total, 1, size);
+            total[0] = 1;
+            return total;
+        }
+
+        digits[i] = digits[i] + 1;
+        return digits;
+    }
 }

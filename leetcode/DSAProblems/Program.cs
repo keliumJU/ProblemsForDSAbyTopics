@@ -40,6 +40,5 @@ string printListNode(ListNode head)
 }
 
 var problem = new TopicArrays();
-int[] nums = [1, 3, 5, 6];
-Console.WriteLine(problem.SearchInsert(nums, 7));
-Console.WriteLine(string.Join(", ", nums));
+int[] digits = [9, 9];
+Console.WriteLine(string.Join(", ", problem.PlusOne(digits)));
