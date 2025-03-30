@@ -165,4 +165,54 @@ public class TopicArrays
         digits[i] = digits[i] + 1;
         return digits;
     }
+
+    // 88. Merge Sorted Array
+    public void Merge(int[] nums1, int m, int[] nums2, int n)
+    {
+        int[] ans = new int[m + n];
+        int i = 0;
+        int l = 0;
+        int r = 0;
+        // compare nums2[i] > nums1[i]
+        // we need here the aproach of double pointer
+        // i mean that iterate over l and r when add a element of n1 or n2 to ans
+        if (n >= 1 && m >= 1)
+        {
+            while (i <= (m + n) - 1)
+            {
+                if ((l <= m - 1 && r <= n - 1) && nums1[l] <= nums2[r])
+                {
+                    ans[i] = nums1[l];
+                    l++;
+                }
+                else if ((r <= n - 1))
+                {
+                    ans[i] = nums2[r];
+                    r++;
+                }
+                else
+                {
+                    ans[i] = nums1[l];
+                    l++;
+                }
+                i++;
+            }
+            for (int j = 0; j < m + n; j++)
+            {
+                nums1[j] = ans[j];
+            }
+        }
+        else
+        {
+            // when nums2 or nums1 are []
+            if (m == 0)
+            {
+                for (int c = 0; c < n; c++)
+                {
+                    nums1[c] = nums2[c];
+                }
+            }
+
+        }
+    }
 }
